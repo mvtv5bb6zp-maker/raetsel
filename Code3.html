@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <title>Raetsel2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+        body{
+            background: lightslategray;
+            color: white;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"]{
+            background-color: #263238;
+            color: white;
+            border: 2px solid #3e525c;
+            padding: 4px;
+        }
+        .bestätigen{
+            text-align: center;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+    <h1>Level 3/3</h1>
+    <h2>Was habe ich gemalt - hab mir Mühe gegeben</h2>
+    <img src="malen1.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort1">
+    <span id="bestätigung1" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <img src="malen2.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort2">
+    <span id="bestätigung2" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <img src="malen3.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort3">
+    <span id="bestätigung3" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <img src="malen4.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort4">
+    <span id="bestätigung4" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+
+    <img src="malen5.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort5">
+    <span id="bestätigung5" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <img src="malen6.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort6">
+    <span id="bestätigung6" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <img src="malen7.png" width="300" ></img>
+    <br>
+    <input type="text" id="antwort7" style="width: 50%;">
+    <span id="bestätigung7" style="display: none; color:rgb(0, 211, 0);"><i>✓</i></span>
+    <br><br>
+    <button onclick="bestätigen()" class="bestätigen">Bestätigen</button>
+
+    <script>
+
+        const antwort1 = document.getElementById("antwort1");
+        const bestätigung1 = document.getElementById("bestätigung1");
+        antwort1.addEventListener("input", () =>{
+            if(antwort1.value.trim() === "Norwegen"){
+                bestätigung1.style.display = "inline";
+            } else{
+                bestätigung1.style.display = "none";
+            }
+        });
+        const antwort2 = document.getElementById("antwort2");
+        const bestätigung2 = document.getElementById("bestätigung2");
+        antwort2.addEventListener("input", () =>{
+            if(antwort2.value.trim() === "Perfekte Bank"){
+                bestätigung2.style.display = "inline";
+            } else{
+                bestätigung2.style.display = "none";
+            }
+        });
+        const antwort3 = document.getElementById("antwort3");
+        const bestätigung3 = document.getElementById("bestätigung3");
+        antwort3.addEventListener("input", () =>{
+            if(antwort3.value.trim() === "Elefant"){
+                bestätigung3.style.display = "inline";
+            } else{
+                bestätigung3.style.display = "none";
+            }
+        });
+        const antwort4 = document.getElementById("antwort4");
+        const bestätigung4 = document.getElementById("bestätigung4");
+        antwort4.addEventListener("input", () =>{
+            if(antwort4.value.trim() === "Waldstraße"){
+                bestätigung4.style.display = "inline";
+            } else{
+                bestätigung4.style.display = "none";
+            }
+        });
+        const antwort5 = document.getElementById("antwort5");
+        const bestätigung5 = document.getElementById("bestätigung5");
+        antwort5.addEventListener("input", () =>{
+            if(antwort5.value.trim() === "pq Formel"){
+                bestätigung5.style.display = "inline";
+            } else{
+                bestätigung5.style.display = "none";
+            }
+        });
+        const antwort6 = document.getElementById("antwort6");
+        const bestätigung6 = document.getElementById("bestätigung6");
+        antwort6.addEventListener("input", () =>{
+            if(antwort6.value.trim() === "Sushi"){
+                bestätigung6.style.display = "inline";
+            } else{
+                bestätigung6.style.display = "none";
+            }
+        });
+        const antwort7 = document.getElementById("antwort7");
+        const bestätigung7 = document.getElementById("bestätigung7");
+        antwort7.addEventListener("input", () =>{
+            if(antwort7.value.trim() === "Folia Plantaginis lanceolatae Plantaginis lanceolatae folium"){
+                bestätigung7.style.display = "inline";
+            } else{
+                bestätigung7.style.display = "none";
+            }
+        });
+        function bestätigen(){
+            if(antwort1.value.trim() === "Norwegen" && antwort2.value.trim() === "Perfekte Bank"&&
+                antwort3.value.trim() === "Elefant"&& antwort4.value.trim() === "Waldstraße"&&
+                antwort5.value.trim() === "pq Formel"&& antwort6.value.trim() === "Sushi"&&
+                antwort7.value.trim() === "Folia Plantaginis lanceolatae Plantaginis lanceolatae folium"){
+                    window.location.href = "Code4.html";
+            }
+
+        }
+    </script>
+</body>
+</html>

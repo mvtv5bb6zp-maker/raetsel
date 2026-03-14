@@ -1,0 +1,76 @@
+<!Doctype html>
+<head>
+    <title>Raetsel2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+        body{
+            background: lightslategray;
+            color: white;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Passwort{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"]{
+            background-color: #263238;
+            color: white;
+            border: 2px solid #3e525c;
+            padding: 4px;
+        }
+        .bestätigen{
+            text-align: center;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="range"]{
+            width: 200px;
+        }
+    </style>
+    <h1>Level 2/3</h1>
+    <h2>Schiebe die Regler so, dass sie passen</h2>
+    <p>Wie schön bist du:</p>
+    <input type="range" id="myRange1" min="0" max="100" value="50">
+    <p id="wert1">50</pid></p>
+    <p>Wie glücklich machst du mich:</p>
+    <input type="range" id="myRange2" min="0" max="100" value="50">
+    <p id="wert2">50</pid></p>
+    <p>Wie sehr liebe ich dich:</p>
+    <input type="range" id="myRange3" min="0" max="100" value="50">
+    <p id="wert3">50</pid></p>
+    <button onclick = "überprüfen()" class="bestätigen">Bestätigen</button>
+    <script>
+        let slider1 = document.getElementById("myRange1");
+        let ausgabe1 = document.getElementById("wert1");
+        slider1.oninput = function(){
+            ausgabe1.innerText = myRange1.value;
+        }
+        let slider2 = document.getElementById("myRange2");
+        let ausgabe2 = document.getElementById("wert2");
+        slider2.oninput = function(){
+            ausgabe2.innerText = myRange2.value;
+        }
+        let slider3 = document.getElementById("myRange3");
+        let ausgabe3 = document.getElementById("wert3");
+        slider3.oninput = function(){
+            ausgabe3.innerText = myRange3.value;
+        }
+        function überprüfen() {
+            if(slider1.value == 100 && slider2.value == 100 && slider3.value == 100){
+                alert("richtig");
+                window.location.href = "Code3.html";
+            }
+        }
+    </script>
+</body>
+</html>
