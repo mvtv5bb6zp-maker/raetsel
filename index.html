@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Raetsel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+        body{
+            background: lightslategray;
+            color: white;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Passwort{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="text"]{
+            background-color: #263238;
+            color: white;
+            border: 2px solid #3e525c;
+            padding: 4px;
+        }
+        .bestätigen{
+            text-align: center;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+    <div id="startseite">
+    <h1>Level 1/3</h1>
+    <h2>Errate das Passwort</h2>
+    <br><br>
+    <div class="Passwort">
+        <label>Passwort: &nbsp;</label>
+        <input type="text" let id = "eingabe">
+        <button onClick="überprüfen()" class="bestätigen">Bestätigen</button>
+    </div>
+    <br>
+    <p>Tipp 1: Das Passwort ist ein Satz mit 3 Wörtern, ohne einen Punkt am Ende</p>
+    <p>Tipp 2: Blau ist die schönste Farbe - Jedoch ist nicht alles, was diese Farbe trägt, auch lecker</p>
+    <p>Tipp 3: Sie wachsen im Wald und es gibt eine Person, die diese sehr mag. Diese Person täuscht sich aber leider gewaltig</p>
+    
+    <script>
+        function überprüfen(){
+            let eingabe = document.getElementById("eingabe").value;
+            if(eingabe === "Heidelbeeren schmecken nicht"){
+                alert("richtig");
+                window.location.href = "Code2.html";
+            }
+        }
+    </script>
+</body>
+</html>
